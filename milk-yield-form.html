@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milk Yield</title>
+  </head>
+  <body>
+    <header>
+      <h1>Milk Yield Form</h1>
+      <nav>
+        <a href="milk-yield.html">Back to List</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Create</h2>
+        <form action="#" method="POST">
+          <div>
+            <label for="cow">Cow:</label>
+            <select id="cow" name="cow" required>
+              <option value="" disabled selected>Select a cow</option>
+              <option value="1">Cow #1 (Breed: Holstein)</option>
+              <option value="2">Cow #2 (Breed: Jersey)</option>
+              <option value="3">Cow #3 (Breed: Guernsey)</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Milk Yield Information</legend>
+            <div>
+              <label for="liters">Liters:</label>
+              <input
+                type="number"
+                id="liters"
+                name="liters"
+                step="0.1"
+                required
+              />
+            </div>
+            <div>
+              <label>Milking Time:</label>
+              <div>
+                <input
+                  type="radio"
+                  id="morning"
+                  name="milking_time"
+                  value="morning"
+                  required
+                />
+                <label for="morning">Morning</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="afternoon"
+                  name="milking_time"
+                  value="afternoon"
+                />
+                <label for="afternoon">Afternoon</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="noon"
+                  name="milking_time"
+                  value="noon"
+                />
+                <label for="noon">Noon</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Fedding Information</legend>
+            <div>
+              <label>Feeding:</label>
+              <div>
+                <input type="checkbox" id="hay" name="feeding" value="hay" />
+                <label for="hay">Hay</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="silage"
+                  name="feeding[]"
+                  value="silage"
+                />
+                <label for="silage">Silage</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="grains"
+                  name="feeding[]"
+                  value="grains"
+                />
+                <label for="grains">Grains</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="supplements"
+                  name="feeding[]"
+                  value="supplements"
+                />
+                <label for="supplements">Supplements</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 My Web App. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
